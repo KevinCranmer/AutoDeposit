@@ -1,0 +1,22 @@
+name: AutoDeposit
+version: '1.0'
+main: me.crazycranberry.autodeposit.AutoDeposit
+api-version: '1.21.5'
+authors: [ CrazyCranberry ]
+description: A mod to automatically deposit items into nearby chests
+commands:
+  autodeposit:
+    description: Executes an autodeposit within a given radius. Default radius is 15.
+    usage: "Usage: /autodeposit (<radius>)"
+    aliases: ad
+    permission: depositor
+  adreload:
+    description: Reload the configs
+    permission: adop
+permissions:
+  depositor:
+    description: Has the ability to run the /autodeposit command
+    default: op
+  adop:
+    description: Has the ability to run the /adreload command
+    default: op

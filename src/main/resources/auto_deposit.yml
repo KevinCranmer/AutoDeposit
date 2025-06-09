@@ -1,0 +1,193 @@
+auto_depositing_block_name: 'Auto Depositor'
+auto_depositing_block_lore: 'Range: {RANGE}'
+auto_deposit_armor: false
+auto_deposit_hotbar: false
+auto_depositing_blocks:
+  range_10:
+    skull_texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2JiYjJkMmFhM2QzZTRiYjU5ZGYzZDU1NWIxNjQ0OTg0YWI1M2UxNjE2ZTdlYWI5YzY1NDgzYmU2ODFjZGI3MiJ9fX0='
+    recipe:
+      - CHEST
+      - HOPPER
+      - CHEST
+      - HOPPER
+      - IRON_BLOCK
+      - HOPPER
+      - CHEST
+      - HOPPER
+      - CHEST
+  range_20:
+    skull_texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzM1Y2VmMGRkNWExZGZjYjI0MTM4ODljZmM5YjNjYzAwZmY5MmUxZWIyOTJjZTAzYThmYWMxOTUwNTU5MTA5NSJ9fX0='
+    recipe:
+      - CHEST
+      - HOPPER
+      - CHEST
+      - HOPPER
+      - GOLD_BLOCK
+      - HOPPER
+      - CHEST
+      - HOPPER
+      - CHEST
+  range_30:
+    skull_texture: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjc0ZGI5M2ZhNzM1NjQ4Mjg2YzZiZmU3N2RiNGUxNTFlOTE5MWVmNjI5NzA5NGM2MDgwN2IyZjYzZDcxYmJjMSJ9fX0='
+    recipe:
+      - CHEST
+      - HOPPER
+      - CHEST
+      - HOPPER
+      - DIAMOND_BLOCK
+      - HOPPER
+      - CHEST
+      - HOPPER
+      - CHEST
+groupings:
+  swords:
+    - WOODEN_SWORD
+    - STONE_SWORD
+    - GOLDEN_SWORD
+    - IRON_SWORD
+    - DIAMOND_SWORD
+    - NETHERITE_SWORD
+  axes:
+    - WOODEN_AXE
+    - STONE_AXE
+    - GOLDEN_AXE
+    - IRON_AXE
+    - DIAMOND_AXE
+    - NETHERITE_AXE
+  shovels:
+    - WOODEN_SHOVEL
+    - STONE_SHOVEL
+    - GOLDEN_SHOVEL
+    - IRON_SHOVEL
+    - DIAMOND_SHOVEL
+    - NETHERITE_SHOVEL
+  pickaxes:
+    - WOODEN_PICKAXE
+    - STONE_PICKAXE
+    - GOLDEN_PICKAXE
+    - IRON_PICKAXE
+    - DIAMOND_PICKAXE
+    - NETHERITE_PICKAXE
+  hoes:
+    - WOODEN_HOE
+    - STONE_HOE
+    - GOLDEN_HOE
+    - IRON_HOE
+    - DIAMOND_HOE
+    - NETHERITE_HOE
+  leather_armor:
+    - LEATHER_HELMET
+    - LEATHER_CHESTPLATE
+    - LEATHER_LEGGINGS
+    - LEATHER_BOOTS
+  iron_armor:
+    - IRON_HELMET
+    - IRON_CHESTPLATE
+    - IRON_LEGGINGS
+    - IRON_BOOTS
+  chainmail_armor:
+    - CHAINMAIL_HELMET
+    - CHAINMAIL_CHESTPLATE
+    - CHAINMAIL_LEGGINGS
+    - CHAINMAIL_BOOTS
+  diamond_armor:
+    - DIAMOND_HELMET
+    - DIAMOND_CHESTPLATE
+    - DIAMOND_LEGGINGS
+    - DIAMOND_BOOTS
+  golden_armor:
+    - GOLDEN_HELMET
+    - GOLDEN_CHESTPLATE
+    - GOLDEN_LEGGINGS
+    - GOLDEN_BOOTS
+  netherite_armor:
+    - NETHERITE_HELMET
+    - NETHERITE_CHESTPLATE
+    - NETHERITE_LEGGINGS
+    - NETHERITE_BOOTS
+  saplings:
+    - OAK_SAPLING
+    - SPRUCE_SAPLING
+    - BIRCH_SAPLING
+    - JUNGLE_SAPLING
+    - ACACIA_SAPLING
+    - CHERRY_SAPLING
+    - DARK_OAK_SAPLING
+    - PALE_OAK_SAPLING
+    - BAMBOO_SAPLING
+  seeds:
+    - WHEAT_SEEDS
+    - PUMPKIN_SEEDS
+    - MELON_SEEDS
+    - TORCHFLOWER_SEEDS
+    - BEETROOT_SEEDS
+  cooked_food:
+    - GOLDEN_CARROT
+    - COOKED_PORKCHOP
+    - COOKED_COD
+    - COOKED_SALMON
+    - COOKED_BEEF
+    - COOKED_CHICKEN
+    - COOKED_RABBIT
+    - COOKED_MUTTON
+    - BAKED_POTATO
+    - BREAD
+    - APPLE
+    - MELON_SLICE
+    - PUMPKIN_PIE
+    - COOKIE
+    - CAKE
+  raw_food:
+    - PORKCHOP
+    - COD
+    - SALMON
+    - BEEF
+    - CHICKEN
+    - RABBIT
+    - MUTTON
+    - POTATO
+  discs:
+    - MUSIC_DISC_13
+    - MUSIC_DISC_CAT
+    - MUSIC_DISC_BLOCKS
+    - MUSIC_DISC_CHIRP
+    - MUSIC_DISC_CREATOR
+    - MUSIC_DISC_CREATOR_MUSIC_BOX
+    - MUSIC_DISC_FAR
+    - MUSIC_DISC_MALL
+    - MUSIC_DISC_MELLOHI
+    - MUSIC_DISC_STAL
+    - MUSIC_DISC_STRAD
+    - MUSIC_DISC_WARD
+    - MUSIC_DISC_11
+    - MUSIC_DISC_WAIT
+    - MUSIC_DISC_OTHERSIDE
+    - MUSIC_DISC_RELIC
+    - MUSIC_DISC_5
+    - MUSIC_DISC_PIGSTEP
+    - MUSIC_DISC_PRECIPICE
+  flowers:
+    - ALLIUM
+    - AZURE_BLUET
+    - BLUE_ORCHID
+    - CORNFLOWER
+    - DANDELION
+    - OPEN_EYEBLOSSOM
+    - CLOSED_EYEBLOSSOM
+    - LILY_OF_THE_VALLEY
+    - OXEYE_DAISY
+    - POPPY
+    - TORCHFLOWER
+    - RED_TULIP
+    - ORANGE_TULIP
+    - WHITE_TULIP
+    - PINK_TULIP
+    - LILAC
+    - PEONY
+    - PITCHER_PLANT
+    - ROSE_BUSH
+    - SUNFLOWER
+    - PINK_PETALS
+    - SPORE_BLOSSOM
+    - WILDFLOWERS
+    - CACTUS_FLOWER
