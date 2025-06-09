@@ -6,6 +6,10 @@ This plugin helps speed up your minecraft organization by automatically depositi
 
 Think of this plugin as a much easier and quicker sorting machine. Simply right-clicking the auto deposit block will send your items off to the nearby containers that they belong in. By default, there are three auto deposit blocks with ranges of 10, 20 and 30.
 
+An item "belongs" in a chest if:
+  - That item already exists in the chest
+  - A "similar" item already exists in the chest (configurable with the "groupings" configuration parameter)
+
 
 <details open><summary style="font-weight: bold; font-size: large">Crafting Recipes</summary>
 
