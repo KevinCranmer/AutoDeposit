@@ -50,3 +50,7 @@ This plugin works without any required configuration changes. Should you want to
 
 </details>
 
+
+### Contact Me
+
+I'm pretty quick to respond in my discord. Join here: https://discord.gg/UTjtJPTjGG
