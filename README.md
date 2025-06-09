@@ -1,13 +1,13 @@
 # Auto Deposit
 
-[![Auto Deposit Demo](./Logo.png)](./AutoDepositDemo.mp4)
+[![Plugin Demo Video](http://img.youtube.com/vi/26DvQB4s7uQ/0.jpg)](http://www.youtube.com/watch?v=26DvQB4s7uQ "Auto Deposit Plugin Quick Demo")
 
 This plugin helps speed up your minecraft organization by automatically depositing items into nearby chests that contain *similar* items.
 
 Think of this plugin as a much easier and quicker sorting machine. Simply right-clicking the auto deposit block will send your items off to the nearby containers that they belong in. By default, there are three auto deposit blocks with ranges of 10, 20 and 30.
 
 
-<details><summary style="font-weight: bold; font-size: large">Crafting Recipes</summary>
+<details open><summary style="font-weight: bold; font-size: large">Crafting Recipes</summary>
 
 Range: 10
 
