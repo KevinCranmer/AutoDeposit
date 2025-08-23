@@ -6,11 +6,13 @@ import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
-import org.bukkit.block.Chest;
 import org.bukkit.block.Container;
+import org.bukkit.block.ShulkerBox;
 import org.bukkit.block.TileState;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.BlockStateMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 
@@ -58,13 +60,16 @@ public final class ADExecutor {
             return;
         }
         boolean atLeastOneChestFound = false;
+        if (getPlugin().config().autoDepositIntoInventoryShulkerBoxes()) {
+            atLeastOneChestFound = depositIntoInventoryShulkerBoxes(p);
+        }
         for (int x = radius * -1; x <= radius; x++) {
             for (int y = radius * -1; y <= radius; y++) {
                 for (int z =  radius * -1; z <= radius; z++) {
                     Block block = p.getLocation().getBlock().getRelative(x, y, z);
                     if (block.getState() instanceof Container container) {
                         atLeastOneChestFound = true;
-                        depositMatchingItems(container, p);
+                        depositMatchingItems(container.getInventory(), p);
                     }
                 }
             }
@@ -88,6 +93,9 @@ public final class ADExecutor {
             return;
         }
         boolean atLeastOneChestFound = false;
+        if (getPlugin().config().autoDepositIntoInventoryShulkerBoxes()) {
+            atLeastOneChestFound = depositIntoInventoryShulkerBoxes(p);
+        }
         String[] chests = chestList.split(";");
         for (int i = 1; i < chests.length; i++) {
             String[] chestCoords = chests[i].split(",");
@@ -104,7 +112,7 @@ public final class ADExecutor {
             }
             if (chest.getState() instanceof Container container) {
                 atLeastOneChestFound = true;
-                depositMatchingItems(container, p);
+                depositMatchingItems(container.getInventory(), p);
             }
         }
         if (!atLeastOneChestFound) {
@@ -112,6 +120,19 @@ public final class ADExecutor {
         } else {
             makeEffect(adBlock.getLocation());
         }
+    }
+
+    private boolean depositIntoInventoryShulkerBoxes(Player p) {
+        boolean depositedIntoAShulker = false;
+        for (ItemStack item : p.getInventory().getContents()) {
+            if (item != null && item.getItemMeta() instanceof BlockStateMeta meta && meta.getBlockState() instanceof ShulkerBox shulker) {
+                depositMatchingItems(shulker.getInventory(), p);
+                meta.setBlockState(shulker);
+                item.setItemMeta(meta);
+                depositedIntoAShulker = true;
+            }
+        }
+        return depositedIntoAShulker;
     }
 
     private void makeEffect(Location location) {
@@ -142,8 +163,8 @@ public final class ADExecutor {
         return inv;
     }
 
-    private void depositMatchingItems(Container chest, Player p) {
-        Set<Material> chestMaterials = Arrays.stream(chest.getInventory().getContents())
+    private void depositMatchingItems(Inventory chestInventory, Player p) {
+        Set<Material> chestMaterials = Arrays.stream(chestInventory.getContents())
             .filter(Objects::nonNull)
             .map(ItemStack::getType)
             .collect(Collectors.toSet());
@@ -152,7 +173,7 @@ public final class ADExecutor {
             if (itemBelongsInChest(e.getKey(), chestMaterials)) {
                 List<InventorySlot> afterDepositingMaterialInventorySlotList = new ArrayList<>();
                 for (InventorySlot is : e.getValue()) {
-                    ItemStack remainingItems = chest.getInventory().addItem(is.item()).get(0);
+                    ItemStack remainingItems = chestInventory.addItem(is.item()).get(0);
                     p.getInventory().setItem(is.index(), remainingItems);
                     if (remainingItems != null && remainingItems.getAmount() > 0) {
                         afterDepositingMaterialInventorySlotList.add(InventorySlot.of(is.index(), remainingItems));

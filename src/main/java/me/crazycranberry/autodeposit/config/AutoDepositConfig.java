@@ -30,6 +30,7 @@ public class AutoDepositConfig {
     private final YamlConfiguration adBlocksConfig;
     private boolean autoDepositArmor;
     private boolean autoDepositHotbar;
+    private boolean autoDepositIntoInventoryShulkerBoxes;
 
     public AutoDepositConfig(YamlConfiguration config, YamlConfiguration adBlocksConfig) {
         originalConfig = loadOriginalConfig("auto_deposit.yml");
@@ -49,6 +50,7 @@ public class AutoDepositConfig {
         this.autoDepositorBlockLore = config.getString("auto_depositing_block_lore", originalConfig.getString("auto_depositing_block_lore"));
         this.autoDepositHotbar = config.getBoolean("auto_deposit_hotbar", originalConfig.getBoolean("auto_deposit_hotbar"));
         this.autoDepositArmor = config.getBoolean("auto_deposit_armor", originalConfig.getBoolean("auto_deposit_armor"));
+        this.autoDepositIntoInventoryShulkerBoxes = config.getBoolean("auto_deposit_into_inventory_shulker_boxes", originalConfig.getBoolean("auto_deposit_into_inventory_shulker_boxes"));
         loadGroupings(config.getConfigurationSection("groupings"));
         loadRecipes(config.getConfigurationSection("auto_depositing_blocks"));
     }
@@ -146,6 +148,10 @@ public class AutoDepositConfig {
 
     public boolean autoDepositHotbar() {
         return autoDepositHotbar;
+    }
+
+    public boolean autoDepositIntoInventoryShulkerBoxes() {
+        return autoDepositIntoInventoryShulkerBoxes;
     }
 
     public void saveAdBlocks(List<Block> adLocations) {
