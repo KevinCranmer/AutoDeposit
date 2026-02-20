@@ -1,7 +1,7 @@
 name: AutoDeposit
-version: '1.0'
+version: '1.2'
 main: me.crazycranberry.autodeposit.AutoDeposit
-api-version: '1.21.5'
+api-version: '1.21.11'
 authors: [ CrazyCranberry ]
 description: A mod to automatically deposit items into nearby chests
 commands:
